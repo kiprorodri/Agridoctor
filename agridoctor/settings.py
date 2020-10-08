@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 # Application definition
 
@@ -127,6 +128,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static')
 ]
+STATICFILES_DIRS = [
+    os.path.join(PROJECT_ROOT,'static')
+]
+
 
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
